@@ -4,7 +4,8 @@ import numpy as np
 from layers import *
 from pipeline import *
 
-
+data_dir = "/content/Kaggle_CoverChange"
+list_ds = tf.data.Dataset.list_files(str(data_dir+"/im1/*"),shuffle=False)
 train_ds = preprocessing(list_ds, batch_size = batch_size)
 ddn = DDN(512,6)
 save_path = "/content/Saved_Models/"
