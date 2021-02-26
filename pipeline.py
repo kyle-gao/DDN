@@ -1,6 +1,8 @@
 import numpy as np
 import tensorflow as tf
 
+#data zipped at https://drive.google.com/file/d/1QCA_o0QU0hlJtpPwe3pEc7_7F8HuvCGU/view?usp=sharing
+
 def make_label_change_array(num_classes):
   """Arg:
   num_classes:int, number of classes
