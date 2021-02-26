@@ -2,10 +2,12 @@ import tensorflow as tf
 import numpy as np
 from layers import *
 
+#basic saved model from https://drive.google.com/file/d/1cBy3ME8JZukNMZIxoMWjhwUMRq_aD9Vv/view?usp=sharing
+
 def DDN (imsize, num_classes = 6):
     #if input image 512*512
 
-    vgg16_512 = tf.keras.models.load_model("/content/Drive/Saved_Model")
+    vgg16_512 = tf.keras.models.load_model("/content/Drive/Saved_Model") #you can load your own vgg based model.
 
     image1 = tf.layers.Input((imsize,imsize,3),name = "image1")
     image2 = layers.Input((imsize,imsize,3),name = "image2")
